@@ -1,0 +1,42 @@
+{
+  "gardens": [
+    {
+      "id": "2gr4MKOe",
+      "name": "plant iris",
+      "description": "this is fresh fruit project",
+      "directoryPath": "C:\\Users\\balya\\Desktop\\garden-cli",
+      "plantedAt": 1764608396089,
+      "lastWatered": 1764608883190,
+      "growthStage": 0.5,
+      "health": 100,
+      "fileCount": 16,
+      "totalSize": 196236,
+      "emotion": {
+        "energy": 33,
+        "melancholy": 10,
+        "chaos": 10,
+        "peace": 48
+      },
+      "dominantEmotion": "peace"
+    },
+    {
+      "id": "xCsVjSbL",
+      "name": "plant raptors",
+      "description": "this is dsa directory",
+      "directoryPath": "C:\\Users\\balya\\Desktop\\Alpha 3.O (P-II)",
+      "plantedAt": 1764608735579,
+      "lastWatered": 1764608802940,
+      "growthStage": 3,
+      "health": 40,
+      "fileCount": 15,
+      "totalSize": 12124130190,
+      "emotion": {
+        "energy": 9,
+        "melancholy": 42,
+        "chaos": 27,
+        "peace": 22
+      },
+      "dominantEmotion": "melancholy"
+    }
+  ]
+}

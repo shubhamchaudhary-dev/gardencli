@@ -1,0 +1,81 @@
+﻿import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// src/ui/screens/Dashboard.tsx
+import { useState, useEffect } from 'react';
+import { Box, Text, useInput, useApp } from 'ink';
+import { PlantCard } from '../widgets/PlantRenderer.js';
+export const Dashboard = ({ db, colorManager, onViewPlant, onPlantNew, onChangeTheme, }) => {
+    const { exit } = useApp();
+    const [gardens, setGardens] = useState([]);
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [showHelp, setShowHelp] = useState(true);
+    useEffect(() => {
+        loadGardens();
+    }, []);
+    const loadGardens = () => {
+        const allGardens = db.getAllGardens();
+        setGardens(allGardens);
+    };
+    useInput((input, key) => {
+        // Hide help after first interaction
+        if (showHelp) {
+            setShowHelp(false);
+        }
+        if (key.upArrow) {
+            setSelectedIndex((prev) => (prev > 0 ? prev - 1 : gardens.length - 1));
+        }
+        else if (key.downArrow) {
+            setSelectedIndex((prev) => (prev < gardens.length - 1 ? prev + 1 : 0));
+        }
+        else if (input === 'v' && gardens.length > 0) {
+            onViewPlant(gardens[selectedIndex]);
+        }
+        else if (input === 'w' && gardens.length > 0) {
+            waterSelectedGarden();
+        }
+        else if (input === 'p') {
+            onPlantNew();
+        }
+        else if (input === 'c') {
+            onChangeTheme();
+        }
+        else if (input === 'd' && gardens.length > 0) {
+            deleteSelectedGarden();
+        }
+        else if (input === 'q') {
+            exit();
+        }
+        else if (input === 'h') {
+            setShowHelp(!showHelp);
+        }
+    });
+    const waterSelectedGarden = () => {
+        const garden = gardens[selectedIndex];
+        const updated = db.waterGarden(garden.id);
+        if (updated) {
+            loadGardens();
+        }
+    };
+    const deleteSelectedGarden = () => {
+        const garden = gardens[selectedIndex];
+        db.deleteGarden(garden.id);
+        setSelectedIndex((prev) => Math.max(0, prev - 1));
+        loadGardens();
+    };
+    const border = colorManager.getBorder(80, 'Your Garden');
+    // New: dynamic label - "Garden" when exactly 1, otherwise "Plants"
+    const countLabel = gardens.length === 1 ? 'Garden' : 'Plants';
+    return (_jsxs(Box, { flexDirection: "column", padding: 1, children: [_jsxs(Box, { flexDirection: "column", marginBottom: 1, children: [_jsx(Text, { children: border.top }), _jsxs(Box, { children: [_jsx(Text, { children: border.side }), _jsxs(Box, { flexDirection: "column", width: 78, children: [_jsx(Text, { bold: true, children: colorManager.gradient('  GARDEN OF DEAD PROJECTS  ') }), _jsx(Text, { dimColor: true, children: "  Where abandoned directories bloom into art" })] }), _jsx(Text, { children: border.side })] }), _jsx(Text, { children: border.bottom })] }), _jsxs(Box, { marginBottom: 1, justifyContent: "space-between", children: [_jsxs(Text, { children: [_jsxs(Text, { dimColor: true, children: [countLabel, ": "] }), _jsx(Text, { bold: true, color: "cyan", children: gardens.length })] }), _jsxs(Text, { children: [_jsx(Text, { dimColor: true, children: "Theme: " }), _jsx(Text, { children: colorManager.getTheme().displayName })] }), _jsxs(Text, { children: [_jsx(Text, { dimColor: true, children: "Total Health: " }), _jsxs(Text, { bold: true, color: "green", children: [gardens.length > 0
+                                        ? Math.round(gardens.reduce((sum, g) => sum + g.health, 0) / gardens.length)
+                                        : 0, "%"] })] })] }), gardens.length === 0 ? (_jsxs(Box, { flexDirection: "column", alignItems: "center", justifyContent: "center", marginY: 3, borderStyle: "round", borderColor: "gray", paddingX: 2, paddingY: 1, children: [_jsx(Text, { dimColor: true, children: "\uD83C\uDF31 Your garden is empty" }), _jsx(Text, { dimColor: true, children: "Press 'p' to plant your first directory" })] })) : (_jsxs(Box, { flexDirection: "column", children: [_jsx(Text, { bold: true, dimColor: true, marginBottom: 1, children: "\u2550\u2550\u2550 Your Plants \u2550\u2550\u2550" }), _jsx(Box, { flexDirection: "column", marginBottom: 1, children: gardens.map((garden, index) => (_jsx(PlantCard, { garden: garden, colorManager: colorManager, selected: index === selectedIndex, compact: true }, garden.id))) })] })), _jsxs(Box, { flexDirection: "column", marginTop: 1, borderStyle: "round", borderColor: "gray", paddingX: 1, children: [_jsx(Text, { bold: true, dimColor: true, children: "Controls" }), _jsxs(Box, { flexDirection: "column", marginTop: 1, children: [_jsxs(Box, { justifyContent: "space-between", children: [_jsxs(Text, { children: [_jsx(Text, { color: "cyan", bold: true, children: "\u2191\u2193" }), " Navigate"] }), _jsxs(Text, { children: [_jsx(Text, { color: "cyan", bold: true, children: "v" }), " View Plant"] }), _jsxs(Text, { children: [_jsx(Text, { color: "cyan", bold: true, children: "w" }), " Water"] })] }), _jsxs(Box, { justifyContent: "space-between", marginTop: 0, children: [_jsxs(Text, { children: [_jsx(Text, { color: "cyan", bold: true, children: "p" }), " Plant New"] }), _jsxs(Text, { children: [_jsx(Text, { color: "cyan", bold: true, children: "c" }), " Change Theme"] }), _jsxs(Text, { children: [_jsx(Text, { color: "cyan", bold: true, children: "d" }), " Delete"] })] }), _jsxs(Box, { justifyContent: "space-between", marginTop: 0, children: [_jsxs(Text, { children: [_jsx(Text, { color: "cyan", bold: true, children: "h" }), " Toggle Help"] }), _jsxs(Text, { children: [_jsx(Text, { color: "cyan", bold: true, children: "q" }), " Quit"] })] })] })] }), showHelp && (_jsxs(Box, { marginTop: 1, borderStyle: "round", borderColor: "yellow", paddingX: 1, flexDirection: "column", children: [_jsx(Text, { color: "yellow", bold: true, children: "\uD83D\uDCA1 Welcome to Your Garden!" }), _jsx(Text, { dimColor: true, children: "Each directory becomes a living plant with emotions based on its activity." }), _jsx(Text, { dimColor: true, children: "\u2022 Recently active projects grow bright and energetic" }), _jsx(Text, { dimColor: true, children: "\u2022 Abandoned directories become melancholic and wilted" }), _jsx(Text, { dimColor: true, children: "\u2022 Large, complex projects appear chaotic and tangled" }), _jsx(Text, { dimColor: true, marginTop: 1, children: "Water your plants regularly to keep them healthy! \uD83D\uDCA7" })] })), _jsx(Box, { marginTop: 1, justifyContent: "center", children: _jsx(Text, { dimColor: true, children: getFooterAnimation(Date.now()) }) })] }));
+};
+function getFooterAnimation(timestamp) {
+    const frames = [
+        '🌱 Growing...',
+        '🌿 Blooming...',
+        '🍃 Swaying...',
+        '✨ Dreaming...',
+    ];
+    const index = Math.floor(timestamp / 1000) % frames.length;
+    return frames[index];
+}
+

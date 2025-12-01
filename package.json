@@ -1,0 +1,53 @@
+{
+  "name": "garden-of-dead-projects",
+  "version": "1.0.0",
+  "description": "A dreamlike terminal experience for visualizing directory lifecycles",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "garden": "./dist/index.js"
+  },
+  "scripts": {
+  "build": "tsc",
+  "postbuild": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/fix-dist-imports.ps1",
+  "watch:build": "tsc --watch --preserveWatchOutput",
+  "start:dist": "node dist/index.js",
+  "dev": "concurrently -k \"npm:watch:build\" \"nodemon --watch dist --ext js --delay 1 --ignore dist/**/*.map --exec node dist/index.js\""
+},
+  "keywords": [
+    "cli",
+    "terminal",
+    "garden",
+    "visualization",
+    "ascii-art"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.3.2",
+    "gradient-string": "^2.0.2",
+    "ink": "^4.4.1",
+    "ink-big-text": "^2.0.0",
+    "ink-gradient": "^3.0.0",
+    "ink-select-input": "^5.0.0",
+    "ink-spinner": "^5.0.0",
+    "ink-text-input": "^5.0.1",
+    "nanoid": "^3.3.11",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/gradient-string": "^1.1.6",
+    "@types/node": "^20.19.25",
+    "@types/react": "^18.3.27",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
