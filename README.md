@@ -238,9 +238,3 @@ gardencli/
 5. Open a PR
 
 Contributions of **themes**, **plants**, and **analysis modules** are highly welcome!
-
----
-
-## 📄 **License**
-
-MIT — free to modify, use, and build upon.
