@@ -17,7 +17,7 @@ It blends **filesystem analytics**, **emotional modeling**, and **generative vis
 ## 🎥 **Demo Video**
 
 ```md
-[![Watch the video](https://img.youtube.com/vi/TwHLduLf2_I/0.jpg)](https://youtu.be/TwHLduLf2_I)
+[![Watch the video](https://img.youtube.com/vi/TwHLduLf2_I/maxresdefault.jpg)](https://youtu.be/TwHLduLf2_I)
 ```
 
 ## 📸 Preview
