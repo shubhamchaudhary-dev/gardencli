@@ -22,7 +22,7 @@ https://github.com/shubhamchaudhary-dev/offline-learn
 ## 🎥 Demo Video
 
 ## Video
-[![Watch the Demo](https://img.youtube.com/vi/GVgb1UgsC_E/hqdefault.jpg)](https://www.youtube.com/watch?v=GVgb1UgsC_E)
+[![Watch the Video](https://img.youtube.com/vi/GVgb1UgsC_E/hqdefault.jpg)](https://www.youtube.com/watch?v=GVgb1UgsC_E)
 
 ---
 
@@ -196,3 +196,50 @@ Perfect for classrooms and low-bandwidth environments.
 
 ```sh
 npm install
+````
+
+### 2️⃣ Run the CLI
+
+```sh
+node bin/index.js
+```
+
+Or if installed globally:
+
+```sh
+offline-learn
+```
+
+---
+
+## 📁 Project Structure
+
+```
+offline-learn/
+├── bin/
+├── lib/
+├── courses/
+├── exports/
+├── leaderboard-server/
+├── package.json
+└── README.md
+```
+
+---
+
+## 📌 Future Enhancements
+
+* Mobile sync mode
+* Offline analytics insights
+* AI-powered quiz generator
+* Multi-language support
+* Course marketplace
+* Classroom LAN mode
+
+## 📜 License
+Shubham Chaudhary
+
+## 🏁 Final Statement
+Offline Learn transforms the command line into a complete offline education ecosystem.
+```
+
