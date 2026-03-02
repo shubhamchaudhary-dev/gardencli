@@ -1,245 +1,240 @@
-# 📚 Offline Learn CLI
+# 🌱 **Garden of Dead Projects (gardencli)**
 
-### *An offline-first terminal learning platform built for low-connectivity environments*
+### *Turn your forgotten folders into living ASCII plants*
 
-**Offline Learn CLI** is a powerful, interactive, terminal-based learning platform designed for students with unreliable internet access.
+**Garden of Dead Projects** is a creative, data-driven **interactive CLI application** that transforms your code folders into beautiful **ASCII plants**, each with its own emotional personality, growth stage, and health profile.
 
-It transforms your terminal into a complete offline education system — supporting quizzes, dashboards, PDF exports, peer-to-peer sharing, and optional leaderboard sync.
-
-Built for resilience.  
-Built for accessibility.  
-Built for the real world.
+It blends **filesystem analytics**, **emotional modeling**, and **generative visuals** into a playful tool that reimagines how developers look at their old or active projects.
 
 ---
 
-## 🌐 Repository
+## 🌐 **Repository**
 
-👉 **GitHub:**  
-https://github.com/shubhamchaudhary-dev/offline-learn
-
----
-
-## 🎥 Demo Video
-
-## Video
-[![Watch the Video](https://img.youtube.com/vi/GVgb1UgsC_E/hqdefault.jpg)](https://www.youtube.com/watch?v=GVgb1UgsC_E)
+👉 **GitHub:** [https://github.com/shubhamchaudhary-dev/gardencli](https://github.com/shubhamchaudhary-dev/gardencli)
 
 ---
+
+## 🎥 **Demo Video**
+
+## **Video**
+[![Watch the video](https://img.youtube.com/vi/TwHLduLf2_I/maxresdefault.jpg)](https://youtu.be/TwHLduLf2_I)
+---
+
 
 ## 📸 Preview
 
-<img width="1919" height="1079" alt="Terminal Dashboard" src="https://github.com/user-attachments/assets/ef4dfb82-dd23-4552-8013-8b9b95c15238" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/cc759b74-d419-4e74-98ee-ca26a550c8c0" />
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/4108f5ff-2187-485b-a8f4-f32cb06ed968" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/e9ee56b9-3784-4950-ad40-0e13dc22e901" />
+<img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/dee5ed28-9e16-4c93-8e98-3d49885b04b3" />
 
-<img width="1919" height="1079" alt="Progress Dashboard" src="https://github.com/user-attachments/assets/af924237-90f8-430d-b171-be0c637c8508" />
 
-<img width="1919" height="1025" alt="PDF Export" src="https://github.com/user-attachments/assets/2173bf0e-97a4-4a7c-b25e-3c65327818b3" />
 
-<img width="1919" height="1079" alt="QR Sharing" src="https://github.com/user-attachments/assets/ff4955cd-e331-4569-a213-2c3aa58a48a9" />
-
----
-
-## 🌍 Why This Project Exists
-
-Millions of students globally face:
-
-- Limited internet connectivity  
-- Expensive mobile data  
-- Cloud-dependent learning systems  
-- Interrupted educational access  
-
-Most platforms assume constant internet.
-
-**Offline Learn does not.**
-
-It ensures:
-
-- 📚 Learning continues offline  
-- ⚡ Instant local performance  
-- 🎯 Interactive quizzes  
-- 🏆 Motivation via gamification  
-- 📡 LAN-based peer sharing  
-- 🌍 Optional global leaderboard sync  
 
 ---
 
-## 🎯 Core Capabilities
+## 🌿 **What This Project Does**
 
-Offline Learn turns your terminal into a full learning ecosystem.
+Gardencli scans any project directory and generates:
 
----
+### 🔎 **Directory Analytics**
 
-## 📚 Multi-Course Learning System
+It evaluates:
 
-Built-in courses include:
+* File count
+* File sizes
+* Age of files
+* Last updated timestamps
+* Folder depth (nesting level)
+* Hidden/temporary folders (`node_modules`, `.git`, `.cache`)
+* Total lines of code
+* Overall structure health
 
-- Mathematics  
-- Physics  
-- Biology  
-- Computer Science  
-- English Grammar  
-
-Each course provides:
-
-- Structured topics  
-- Curated quiz sets  
-- Persistent score tracking  
-- Fully offline availability  
+These metrics reflect the **chaos, order, decay, or activity** of your project.
 
 ---
 
-## 📝 Interactive Quiz Engine
+## 🎭 **Emotional Profile Generation**
 
-A responsive CLI quiz system featuring:
+Each project is assigned an **Emotional Vector** based on its stats:
 
-- Instant answer validation  
-- Score calculation  
-- Persistent storage using LowDB  
-- Clean terminal interaction  
-- Retry & improvement flow  
+| Emotion        | Represents                         |
+| -------------- | ---------------------------------- |
+| **Energy**     | Recent activity & updates          |
+| **Melancholy** | Old/abandoned projects             |
+| **Chaos**      | Complex, messy, bloated structures |
+| **Peace**      | Clean, optimized, stable projects  |
 
-Designed for fast, distraction-free practice.
+From this, unique emotional signatures are produced:
 
----
+```
+melancholy-chaotic
+wild-energetic
+serene
+chaotic-silent
+vibrant
+```
 
-## 📊 Progress Dashboard
-
-Built with Blessed + Blessed-Contrib:
-
-- Performance graphs  
-- Historical score tracking  
-- Learning consistency metrics  
-- Badge visualization  
-- Real-time terminal dashboard UI  
-
-All stored locally in lightweight JSON.
+Every plant has personality.
 
 ---
 
-## 🏅 Gamification System
+## 🌵 **ASCII Plant Generator**
 
-Students unlock badges like:
+Inspired by **L-Systems**, plants grow visually based on:
 
-- 🏆 Perfectionist Badge  
-- 🎓 Scholar Badge  
-- 🔁 Consistent Learner Badge  
+* Project activity
+* Emotional vector
+* Project size
+* Age
+* Complexity
 
-Gamification increases engagement and motivation — even offline.
+Plants include:
 
----
+* Branches
+* Stems
+* Roots
+* Leaves
+* Emotion badges
+* Unique ASCII patterns
 
-## 📄 PDF Export Engine
-
-Generate professionally formatted PDFs:
-
-- Structured course material  
-- Clean formatting  
-- Print-ready design  
-- Saved inside `/exports`  
-
-Built using PDFKit.
+*No two gardens ever look the same.*
 
 ---
 
-## 🌍 Global Leaderboard (Optional Online Mode)
+## 🎨 **Dynamic Themes**
 
-When internet becomes available:
+Choose between custom CLI themes:
 
-- Sync scores  
-- Compare performance globally  
-- Lightweight Express backend  
-- No heavy cloud dependency  
+* Melancholy Green
+* Electric Purple
+* Soil Brown
+* Twilight Blue
+* High Contrast
+* More coming soon
 
-Offline-first. Online-optional.
+Themes apply to:
 
----
-
-## 📡 Peer-to-Peer LAN Sharing
-
-Share courses across local network:
-
-- QR code generation  
-- Socket.io transfer  
-- No internet required  
-- Instant device-to-device sharing  
-
-Perfect for classrooms and low-bandwidth environments.
+* Plants
+* Badges
+* Borders
+* UI highlights
 
 ---
 
-## ⚙️ Tech Stack
+## 🖥️ **Interactive CLI UI (Powered by Ink)**
 
-- Node.js  
-- Commander.js — CLI routing  
-- Blessed + Blessed-Contrib — dashboard UI  
-- LowDB — local database  
-- Fuse.js — search  
-- PDFKit — PDF generation  
-- Express — leaderboard API  
-- Socket.io — LAN sharing  
+### 1️⃣ **Landing Animation**
+
+A smooth intro screen sets the vibe.
+
+### 2️⃣ **Dashboard**
+
+Browse all saved gardens with:
+
+* Project name
+* Directory path
+* Emotional summary
+* File stats
+* Growth stage
+
+### 3️⃣ **Plant Viewer**
+
+See the ASCII plant with:
+
+* Emotional profile
+* Health stats
+* Growth patterns
+* Dynamic coloring
+
+### 4️⃣ **Creation Wizard**
+
+Create a new garden via:
+
+* Name
+* Folder path
+* Description
+* Validation checks
+* Error handling
+
+### 5️⃣ **Theme Selector**
+
+Preview & switch themes instantly.
 
 ---
 
-## 🏗 Architecture Philosophy
+## ⚙️ **Tech Stack**
 
-- Offline-first design  
-- Modular CLI structure  
-- Lightweight JSON storage  
-- Zero paid API dependency  
-- Minimal latency  
-- Fully portable  
+* **Node.js + TypeScript**
+* **Ink (React for CLI)**
+* **fs-extra** — filesystem analysis
+* **L-System–inspired renderer**
+* **Color gradients**
+* **Modular folder architecture**
 
 ---
 
-## 🚀 How to Run
+## 🚀 **How to Run**
 
-### 1️⃣ Install dependencies
+### **1. Install dependencies**
 
 ```sh
 npm install
-````
-
-### 2️⃣ Run the CLI
-
-```sh
-node bin/index.js
 ```
 
-Or if installed globally:
+### **2. Build**
 
 ```sh
-offline-learn
+npm run build
+```
+
+### **3. Run the CLI**
+
+```sh
+node dist/index.js
 ```
 
 ---
 
-## 📁 Project Structure
+## 📁 **Project Structure**
 
 ```
-offline-learn/
-├── bin/
-├── lib/
-├── courses/
-├── exports/
-├── leaderboard-server/
+gardencli/
+├── src/
+│   ├── screens/
+│   ├── widgets/
+│   ├── utils/
+│   ├── themes/
+│   ├── plants/
+│   └── index.ts
 ├── package.json
-└── README.md
+├── tsconfig.json
+├── README.md
+├── dist/
+└── node_modules/
 ```
+
+## 📌 **Future Enhancements**
+
+* Animated plant growth
+* Export plants as PNG/SVG
+* Web dashboard mode
+* Git-based analytics
+* AI emotional summarizer
+* Multi-plant ecosystems
 
 ---
 
-## 📌 Future Enhancements
+## 🤝 **Contributing**
 
-* Mobile sync mode
-* Offline analytics insights
-* AI-powered quiz generator
-* Multi-language support
-* Course marketplace
-* Classroom LAN mode
+1. Fork the repo
+2. Create a feature branch:
 
-## 📜 License
-Shubham Chaudhary
+   ```sh
+   git checkout -b feature/my-feature
+   ```
+3. Commit your changes
+4. Push your branch
+5. Open a PR
 
-## 🏁 Final Statement
-Offline Learn transforms the command line into a complete offline education ecosystem.
-```
-
+Contributions of **themes**, **plants**, and **analysis modules** are highly welcome!
